@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Add two integer,modulo for function.
+Module for add_integer() function.
 """
 
 
@@ -9,11 +9,12 @@ def add_integer(a, b=98):
     Args:
         a: Integer or float.
         b: Integer or float.
+
     Returns:
         An integer. The addition of a and b.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
-    elif not isinstance(b, (int, float)):
+    if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
     return int(a) + int(b)

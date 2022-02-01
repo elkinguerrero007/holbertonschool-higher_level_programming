@@ -1,15 +1,20 @@
 #!/usr/bin/python3
+
+
+"""
+functions:
+    inherits_from
+"""
+
+
 def inherits_from(obj, a_class):
-
-    """function to check is obj is inherited in a class
-    Arguments:
-        param1: obj
-        param2: a_class that matches the obj
-    Return:
-    True for issubclass of obj or False if not
     """
-
-    if issubclass(type(obj), a_class) and type(obj) != a_class:
-        return True
-    else:
+    this function validate if is a subclass and
+    Args:
+        obj: any
+        a_class: any
+    return:True or False
+    """
+    if obj.__class__ is a_class:
         return False
+    return issubclass(obj.__class__, a_class)

@@ -1,37 +1,16 @@
 #!/usr/bin/python3
-"""
-Geometry module
-Classes:
-    BaseGeometry
-"""
+"""Cass definition"""
 
 
 class BaseGeometry:
-    """
-    this class is a base of Geometry
-    """
-
+    """improve geometry"""
     def area(self):
-        """
-        blueprint method
-        """
+        """Area"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-        integer_validator
-        Args:
-            name: string
-            value: int
-        Raise:
-            - TypeError is not int
-            - ValueError if value is less or equal to zero
-        """
-
+        """ function"""
         if type(value) is not int:
-            text = "{} must be an integer".format(name)
-            raise TypeError(text)
-
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            text = "{} must be greater than 0".format(name)
-            raise ValueError(text)
+            raise ValueError("{} must be greater than 0".format(name))

@@ -7,6 +7,7 @@ after each line containing a specific string
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """funtion"""
     with open(filename, mode='r', encoding='utf-8') as f:
         text = f.readlines()
         new_text = []

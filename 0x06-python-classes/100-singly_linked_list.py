@@ -1,76 +1,95 @@
 #!/usr/bin/python3
+"""Node is the class that defined a Node """
 
 
 class Node:
-    ''' node of a singly linked list
-    '''
+    """Node is the class that defined a Node """
     def __init__(self, data, next_node=None):
-        ''' initialized a node
-        '''
+        """__init__ is the class that defined a Node """
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        ''' method that returns the data of a node
-        '''
+        """__init__ is the class that defined a Node """
         return self.__data
 
     @data.setter
     def data(self, value):
-        ''' method that sets the data of a node
-        '''
-        if isinstance(value, int) is False:
-            raise TypeError('data must be an integer')
-        else:
-            self.__data = value
+        """__init__ is the class that defined a Node """
+        if type(value) is not int:
+            raise TypeError("data must be an integer")
+        self.__data = value
+
+    @property
+    def data(self):
+        """__init__ is the class that defined a Node """
+        return self.__data
+
+    @data.setter
+    def data(self, value):
+        """__init__ is the class that defined a Node """
+        if type(value) is not int:
+            raise TypeError("data must be an integer")
+        self.__data = value
 
     @property
     def next_node(self):
-        ''' method that returns the next node
-        '''
+        """__init__ is the class that defined a Node """
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        ''' method that sets the next node
-        '''
-        if value is not None and isinstance(value, Node) is False:
-            raise TypeError('next_node must be a Node object')
-        else:
-            self.__next_node = value
+        """__init__ is the class that defined a Node """
+        if type(value) is not Node and value is not None:
+            raise TypeError("next_node must be a Node object")
+        self.__next_node = value
 
 
 class SinglyLinkedList:
-    ''' a singly linked list
-    '''
+    """Node is the class that defined a Node """
     def __init__(self):
-        ''' initializes a singly linked list
-        '''
         self.__head = None
 
     def sorted_insert(self, value):
-        ''' method that inserts a node into a linked list
-        '''
         if self.__head is None:
-            self.__head = Node(value, None)
-        elif value <= self.__head.data:
-            new = Node(value, self.__head)
-            self.__head = new
+            self.__head = Node(value)
         else:
-            ptr = self.__head
-            while ptr.next_node is not None and ptr.next_node.data <= value:
-                ptr = ptr.next_node
-
-            tmp = ptr.next_node
-            ptr.next_node = Node(value, tmp)
+            current_node = self.__head
+            while current_node is not None:
+                if self.__head.data >= value:
+                    self.__head = Node(value, self.__head)
+                    break
+                if current_node.next_node is None:
+                    current_node.next_node = Node(value)
+                    break
+                elif current_node.next_node.data >= value:
+                    current_node.next_node = \
+                            Node(value, current_node.next_node)
+                    break
+                current_node = current_node.next_node
 
     def __str__(self):
-        ''' the printable representation of the linked list
-        '''
-        ptr = self.__head
-        toprint = ''
-        while ptr is not None:
-            toprint = toprint + str(ptr.data) + '\n'
-            ptr = ptr.next_node
-        return toprint[:-1]
+        string = ""
+        current_node = self.__head
+        while current_node is not None:
+            new_line = "\n" if current_node.next_node is not None else ""
+            string += "%d%s" % (current_node.data, new_line)
+            current_node = current_node.next_node
+        return string
+
+
+if __name__ == "__main__":
+    sll = SinglyLinkedList()
+    sll.sorted_insert(2)
+    sll.sorted_insert(5)
+    sll.sorted_insert(3)
+    sll.sorted_insert(10)
+    sll.sorted_insert(1)
+    sll.sorted_insert(-4)
+    sll.sorted_insert(-3)
+    sll.sorted_insert(4)
+    sll.sorted_insert(5)
+    sll.sorted_insert(12)
+    sll.sorted_insert(3)
+    print(sll)

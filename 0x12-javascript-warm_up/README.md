@@ -27,6 +27,7 @@
 >> * Ubuntu 20.04 LTS
 >> * Emacs editor
 >> * node (version 14.x)
+>>  * semistandard compliant (version 16.x.x)
 
 ## **_More Info._**  👈
 

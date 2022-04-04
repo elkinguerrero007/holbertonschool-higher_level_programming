@@ -5,7 +5,7 @@
 
 ##**_Resources._** 👌
 
-### **_Read or watch:_** 👈
+### **_Read or watch:_** 📑
 
 >> * [Writing JavaScript Code](https://intranet.hbtn.io/rltoken/OdMLtl6Y9mpQkaoEqJCRSg)
 >> * [Variables](https://intranet.hbtn.io/rltoken/iE6zaLw7pybp648IfRmk5Q)

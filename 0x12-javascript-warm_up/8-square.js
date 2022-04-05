@@ -1,4 +1,3 @@
-
 #!/usr/bin/node
 const side = parseInt(process.argv[2]);
 if (side) {

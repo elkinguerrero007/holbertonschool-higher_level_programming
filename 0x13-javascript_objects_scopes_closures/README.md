@@ -1,6 +1,9 @@
 # **_JavaScript - Objects, Scopes and Closures_**
 
 
+![linux2](https://user-images.githubusercontent.com/85587286/162041634-10f5b054-3c0f-4739-8f1b-3be81c4b4621.gif)
+
+
 ## **_Resources._**
 
 ### **_Read or watch:_**

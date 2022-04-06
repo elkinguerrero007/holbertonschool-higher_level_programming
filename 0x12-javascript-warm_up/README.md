@@ -26,8 +26,9 @@
 
 >> * Ubuntu 20.04 LTS
 >> * Emacs editor
+>> * webstorm editor
 >> * node (version 14.x)
->>  * semistandard compliant (version 16.x.x)
+>> * semistandard compliant (version 16.x.x)
 
 ## **_More Info._**  👈
 

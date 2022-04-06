@@ -40,6 +40,6 @@ Install Node 14
 
 ### **_Install semi-standard._***  👌
 
-#### **_Documentation._** 👈
+#### **_Documentation._**   (https://github.com/standard/semistandard) 👈  [![built in](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/standard/semistandard)
 
 `$ sudo npm install semistandard --global`

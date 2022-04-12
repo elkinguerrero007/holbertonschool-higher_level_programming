@@ -1,15 +1,14 @@
 #!/usr/bin/node
 
 const { argv } = require('process');
-const { readFile } = require('fs');
+const { writeFile } = require('fs');
 const filename = argv[2];
+const content = argv[3];
 
 try {
-  readFile(filename, (err, data) => {
+  writeFile(filename, content, err => {
     if (err) {
       console.log(err);
-    } else {
-      console.log(data.toString('utf8'));
     }
   });
 } catch (err) {

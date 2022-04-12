@@ -9,16 +9,16 @@ const filename = argv[3];
 
 get(url, (err, res, body) => {
   if (err) {
-    console.log(err)
+    console.log(err);
     return;
   }
 
   const data = JSON.parse(body);
   const tasks = {};
 
-  data.forEach(({completed, userId: id}) => {
+  data.forEach(({ completed, userId: id }) => {
     if (completed) {
-      tasks[id] = 1 + (tasks[id] == undefined ? 0 : tasks[id])
+      tasks[id] = 1 + (tasks[id] == undefined ? 0 : tasks[id]);
     }
   });
   console.log(tasks);

@@ -16,4 +16,3 @@ if __name__ == "__main__":
         sesionCRUD.delete(state)
     sesionCRUD.commit()
     sesionCRUD.close()
-    

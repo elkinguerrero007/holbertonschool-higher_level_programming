@@ -26,4 +26,3 @@ if __name__ == "__main__":
     for cities, states in new_table:
         print("{}: ({}) {}".format(states.name, cities.id, cities.name))
     session.close()
-    

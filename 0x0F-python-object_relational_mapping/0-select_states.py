@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """
 Write a script that
@@ -19,4 +20,3 @@ if __name__ == "__main__":
         print(row)
     state.close()
     data.close()
-    

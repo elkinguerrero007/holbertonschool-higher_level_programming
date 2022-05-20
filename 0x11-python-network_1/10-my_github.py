@@ -13,4 +13,3 @@ if __name__ == "__main__":
     au = (user, pwd)
     r = requests.get('https://api.github.com/user', auth=au)
     print(r.json().get('id'))
-    

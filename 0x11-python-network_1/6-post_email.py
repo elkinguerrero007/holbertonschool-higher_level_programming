@@ -14,4 +14,3 @@ if __name__ == "__main__":
     payload = {'email': email}
     r = requests.post(url, data=payload)
     print(r.text)
-    

@@ -4,7 +4,6 @@ import urllib.request
 import urllib.parse
 from sys import argv
 
-
 if __name__ == "__main__":
     try:
         with urllib.request.urlopen(argv[1]) as response:
@@ -12,4 +11,3 @@ if __name__ == "__main__":
             print(s.decode('utf-8'))
     except urllib.error.HTTPError as err:
         print('Error code:', err.code)
-        

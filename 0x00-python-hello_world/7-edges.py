@@ -5,4 +5,4 @@ word_last_2 = word[-2:]
 middle_word = word[1:-1]
 
 
-print(f"First 3 letters: {word_first_3} \nword_last_2: {word_last_2}\nMiddle word:{middle_word}")
+print(f"First 3 letters:{word_first_3}\nword_last_2:{word_last_2}\nMiddle word:{middle_word}")

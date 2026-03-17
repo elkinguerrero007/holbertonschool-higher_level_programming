@@ -1,10 +1,11 @@
--- Creates database hbtn_0d_usa and the table cities on your MySQL server
+-- Create database and cities table for Holberton exercise
+
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 USE hbtn_0d_usa;
+
 CREATE TABLE IF NOT EXISTS cities(
-    `id` INT UNIQUE AUTO_INCREMENT NOT NULL,
-                                  `state_id` INT NOT NULL,
-                                  `name` VARCHAR(256),
-                                  PRIMARY KEY(`id`),
-                                  FOREIGN KEY(`state_id`) REFERENCES states(`id`));
-				  
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    state_id INT NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    FOREIGN KEY(state_id) REFERENCES states(id)
+);
